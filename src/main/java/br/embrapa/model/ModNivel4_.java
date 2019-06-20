@@ -1,5 +1,6 @@
 package br.embrapa.model;
 
+import br.embrapa.model.pk.ModNivel4_PK;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
@@ -9,11 +10,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class ModNivel4_ {
 
 	public static volatile SingularAttribute<ModNivel4, String> nmNivel4;
-	public static volatile SingularAttribute<ModNivel4, CadEmpresa> cdEmpresa;
-	public static volatile SingularAttribute<ModNivel4, ModNivel1> cdNivel1;
-	public static volatile SingularAttribute<ModNivel4, ModNivel2> cdNivel2;
-	public static volatile SingularAttribute<ModNivel4, ModNivel3> cdNivel3;
-	public static volatile SingularAttribute<ModNivel4, Long> cdNivel4;
+	public static volatile SingularAttribute<ModNivel4, ModNivel4_PK> pkNivel4;
 
 }
 
