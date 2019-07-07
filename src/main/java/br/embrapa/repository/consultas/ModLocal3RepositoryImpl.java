@@ -19,9 +19,6 @@ import br.embrapa.model.ModLocal1_;
 import br.embrapa.model.ModLocal2_;
 import br.embrapa.model.ModLocal3;
 import br.embrapa.model.ModLocal3_;
-import br.embrapa.model.pk.ModLocal1_PK_;
-import br.embrapa.model.pk.ModLocal2_PK_;
-import br.embrapa.model.pk.ModLocal3_PK_;
 import br.embrapa.repository.filter.ModLocal3Filter;
 import br.embrapa.repository.projections.ResumoModLocal3;
 
@@ -50,7 +47,7 @@ public class ModLocal3RepositoryImpl {
 		Root<ModLocal3> root = criteria.from(ModLocal3.class);
 		
 		criteria.select(builder.construct(ResumoModLocal3.class
-				, root.get(ModLocal3_.pkLocal3)
+				, root.get(ModLocal3_.cdLocal3)
 			//	, root.get(ModLocal3_.pkLocal3).get(ModLocal2_PK_.nmLocal2)
 				// root.get(ModLocal3_.modLocal2).get(ModLocal2_.modLocal1).get(ModLocal1_.nmlocal1)
 				, root.get(ModLocal3_.nmLocal3)));
@@ -96,11 +93,11 @@ public class ModLocal3RepositoryImpl {
 
 		if (modLocal3Filter.getCdLocal1() != null) {
 			predicates.add(
-					builder.equal(root.get(ModLocal3_.pkLocal3).get(ModLocal3_PK_.modLocal2).get(ModLocal2_.pkLocal2).get(ModLocal2_PK_.modLocal1).get(ModLocal1_.pkLocal1).get(ModLocal1_PK_.cdLocal1), modLocal3Filter.getCdLocal1()));
+					builder.equal(root.get(ModLocal3_.modLocal2).get(ModLocal2_.modLocal1).get(ModLocal1_.cdLocal1), modLocal3Filter.getCdLocal1()));
 }
 		if (modLocal3Filter.getCdLocal2() != null) {
 			predicates.add(
-					builder.equal(root.get(ModLocal3_.pkLocal3).get(ModLocal3_PK_.modLocal2).get(ModLocal2_.pkLocal2).get(ModLocal2_PK_.cdLocal2), modLocal3Filter.getCdLocal2()));
+					builder.equal(root.get(ModLocal3_.modLocal2).get(ModLocal2_.cdLocal2), modLocal3Filter.getCdLocal2()));
 }
 		
 		

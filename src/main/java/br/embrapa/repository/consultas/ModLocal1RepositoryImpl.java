@@ -55,7 +55,7 @@ public class ModLocal1RepositoryImpl {
 		Root<ModLocal1> root = criteria.from(ModLocal1.class);
 		
 		criteria.select(builder.construct(ResumoModLocal1.class
-				, root.get(ModLocal1_.pkLocal1)
+				, root.get(ModLocal1_.cdLocal1)
 				, root.get(ModLocal1_.nmlocal1)));
 		
 		

@@ -1,9 +1,6 @@
 package br.embrapa.repository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
-
 
 import br.embrapa.model.ModLocal1;
 import br.embrapa.model.pk.ModLocal1_PK;

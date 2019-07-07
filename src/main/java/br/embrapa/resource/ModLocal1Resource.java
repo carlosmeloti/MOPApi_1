@@ -59,14 +59,19 @@ public class ModLocal1Resource {
 	@Autowired
 	private ApplicationEventPublisher publisher;
 	
-	@PostMapping
+	/*@PostMapping
 	public ResponseEntity<ModLocal1> criar(@RequestBody ModLocal1 modLocal1, HttpServletResponse response) {
-		ModLocal1 modLocal1Salva = modLocal1Repository.save(modLocal1);
+		ModLocal1 modLocal1Salva = new ModLocal1();
+		modLocal1Salva.setNmlocal1("Teste");
+		ModLocal1_PK pk = new ModLocal1_PK();
+		pk.setCdEmpresa();
+		
+		= modLocal1Repository.save(modLocal1);
 		
 		publisher.publishEvent(new RecursoCriadoEvent(this, response, modLocal1Salva.getPkLocal1().getCdLocal1()));
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(modLocal1Salva);
-	}
+	}*/
 	
 	
 	@GetMapping("/{cdLocal1}/{cdEmpresa}")

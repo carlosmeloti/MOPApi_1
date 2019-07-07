@@ -1,6 +1,5 @@
 package br.embrapa.model;
 
-import br.embrapa.model.pk.ModLocal2_PK;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
@@ -10,7 +9,8 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class ModLocal2_ {
 
 	public static volatile SingularAttribute<ModLocal2, String> nmLocal2;
-	public static volatile SingularAttribute<ModLocal2, ModLocal2_PK> pkLocal2;
+	public static volatile SingularAttribute<ModLocal2, Long> cdLocal2;
+	public static volatile SingularAttribute<ModLocal2, ModLocal1> modLocal1;
 
 }
 

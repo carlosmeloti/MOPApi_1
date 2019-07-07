@@ -15,11 +15,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 
-import br.embrapa.model.ModLocal1_;
 import br.embrapa.model.ModLocal2;
 import br.embrapa.model.ModLocal2_;
-import br.embrapa.model.pk.ModLocal1_PK_;
-import br.embrapa.model.pk.ModLocal2_PK_;
 import br.embrapa.repository.filter.ModLocal2Filter;
 import br.embrapa.repository.projections.ResumoModLocal2;
 
@@ -96,11 +93,11 @@ public class ModLocal2RepositoryImpl {
 
 		if (modLocal2Filter.getCdLocal1() != null) {
 			predicates.add(
-					builder.equal(root.get(ModLocal2_.pkLocal2).get(ModLocal2_PK_.modLocal1).get(ModLocal1_.pkLocal1).get(ModLocal1_PK_.cdLocal1), modLocal2Filter.getCdLocal1()));
+					builder.equal(root.get(ModLocal2_.modLocal1), modLocal2Filter.getCdLocal1()));
 		}
 		if (modLocal2Filter.getCdEmpresa() != null) {
 			predicates.add(
-					builder.equal(root.get(ModLocal2_.pkLocal2).get(ModLocal2_PK_.modLocal1).get(ModLocal1_.pkLocal1).get(ModLocal1_PK_.cdEmpresa), modLocal2Filter.getCdEmpresa()));
+					builder.equal(root.get(ModLocal2_.modLocal1), modLocal2Filter.getCdEmpresa()));
 		}
 
 		

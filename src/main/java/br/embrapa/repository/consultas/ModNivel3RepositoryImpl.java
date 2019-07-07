@@ -31,7 +31,7 @@ public class ModNivel3RepositoryImpl {
 	
 	
 	@PersistenceContext
-	private EntityManager manager;
+	private EntityManager manager; 
 	
 	
 	public Page<ModNivel3> filtrar(ModNivel3Filter modNivel3Filter, Pageable pageable) {
@@ -99,7 +99,7 @@ public class ModNivel3RepositoryImpl {
 			Root<ModNivel3> root) {
 		List<Predicate> predicates = new ArrayList<>();
 
-		if (modNivel3Filter.getCdNivel1() != null) {
+		/*if (modNivel3Filter.getCdNivel1() != null) {
 			predicates.add(
 			builder.equal(root.get(ModNivel3_.pkNivel3).get(ModNivel3_PK_.modNivel2).get(ModNivel2_.pkNivel2).get(ModNivel2_PK_.modNivel1)
 					.get(ModNivel1_.pkNivel1).get(ModNivel1_PK_.cdNivel1), modNivel3Filter.getCdNivel1()));
@@ -108,7 +108,7 @@ public class ModNivel3RepositoryImpl {
 		if (modNivel3Filter.getCdNivel2() != null) {
 			predicates.add(
 			builder.equal(root.get(ModNivel3_.pkNivel3).get(ModNivel3_PK_.modNivel2).get(ModNivel2_.pkNivel2).get(ModNivel2_PK_.cdNivel2), modNivel3Filter.getCdNivel2()));
-		}
+		}*/
 		
 		return predicates.toArray(new Predicate[predicates.size()]);
 	}

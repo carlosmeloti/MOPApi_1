@@ -100,7 +100,7 @@ public class ModNivel4RepositoryImpl {
 			Root<ModNivel4> root) {
 		List<Predicate> predicates = new ArrayList<>();
 
-		if (modNivel4Filter.getCdNivel1() != null) {
+		/*if (modNivel4Filter.getCdNivel1() != null) {
 			predicates.add(
 			builder.equal(root.get(ModNivel4_.pkNivel4).get(ModNivel4_PK_.modNivel3).get(ModNivel3_.pkNivel3).get(ModNivel3_PK_.modNivel2)
 					.get(ModNivel2_.pkNivel2).get(ModNivel2_PK_.modNivel1).get(ModNivel1_.pkNivel1).get(ModNivel1_PK_.cdNivel1), modNivel4Filter.getCdNivel1()));
@@ -110,7 +110,7 @@ public class ModNivel4RepositoryImpl {
 			predicates.add(
 			builder.equal(root.get(ModNivel4_.pkNivel4).get(ModNivel4_PK_.modNivel3).get(ModNivel3_.pkNivel3).get(ModNivel3_PK_.modNivel2)
 					.get(ModNivel2_.pkNivel2).get(ModNivel2_PK_.cdNivel2), modNivel4Filter.getCdNivel2()));
-		}
+		}*/
 		
 		if (modNivel4Filter.getCdNivel3() != null) {
 			predicates.add(
